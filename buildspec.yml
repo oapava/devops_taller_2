@@ -4,10 +4,7 @@ phases:
   pre_build:
     commands:
       - pip install -r requirements.txt
+      - echo "¡Compilacion exitosa!"
 artifacts:
   files:
     - '**/*'
-
-  post_build:
-    commands:
-      - echo "¡Compilacion exitosa!" && echo "::set-output name=resultado::compilacion-exitosa"
