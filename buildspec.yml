@@ -10,4 +10,4 @@ artifacts:
 
   post_build:
     commands:
-      - echo "¡Compilacion exitosa!"
+      - echo "¡Compilacion exitosa!" && echo "::set-output name=resultado::compilacion-exitosa"
