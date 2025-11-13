@@ -7,3 +7,7 @@ phases:
 artifacts:
   files:
     - '**/*'
+
+  post_build:
+    commands:
+      - echo "¡Compilacion exitosa!"
