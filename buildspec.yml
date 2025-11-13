@@ -1,11 +1,18 @@
 version: 0.2
 
 phases:
-  pre_build:
+  install:
+    runtime-versions:
+      python: 3.8
     commands:
       - pip install -r requirements.txt
+      - pip install pytest
+
+  build:
+    commands:
       - echo "¡Compilacion exitosa, ahora ejecuta las pruebas unitarias!"
-      - pytest tests/
+      - python -m pytest tests/
+
 artifacts:
   files:
     - '**/*'
